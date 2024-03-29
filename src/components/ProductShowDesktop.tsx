@@ -70,7 +70,7 @@ export default function ProductShowDesktop() {
               <img
                 src={img.src}
                 alt={img.name}
-                className={`w-[88px] h-[88px] rounded-[10px] ${
+                className={`img-click w-[88px] h-[88px] rounded-[10px] ${
                   index === show ? "opacity-25" : "opacity-100"
                 }`}
               />
