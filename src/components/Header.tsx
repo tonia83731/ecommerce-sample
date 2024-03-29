@@ -76,12 +76,12 @@ export default function Header() {
         <div className="px-6 py-5 flex justify-between xl:grid xl:grid-cols-7">
           <div className="flex items-center">
             <button
-              className="xl:hidden"
+              className="xl:hidden nav-menu"
               onClick={() => setMobileNavToggle(!mobileNavToggle)}
             >
               <MenuIcon />
             </button>
-            <a href="/" className="ml-4">
+            <a href="/" className="ml-4 nav-link logo">
               <Logo />
             </a>
           </div>
@@ -93,7 +93,7 @@ export default function Header() {
                   href={link.link}
                   className={`mb-7 xl:mb-0 xl:mt-2 py-4 ${
                     pathname === link.link && "border-b-4 border-primary-orange"
-                  }`}
+                  } nav-link`}
                 >
                   {link.name}
                 </a>
@@ -131,7 +131,7 @@ export default function Header() {
                         className={`mb-7 xl:mb-0 xl:mt-2 h-full ${
                           pathname === link.link &&
                           "border-l-4 border-primary-orange"
-                        }`}
+                        } nav-link`}
                       >
                         {link.name}
                       </a>
