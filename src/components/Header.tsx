@@ -7,6 +7,7 @@ import Avatar from "../assets/image-avatar.png";
 import { useState } from "react";
 import { useProductContext } from "../context/ProductContext";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const { cartItem, setCartItem } = useProductContext();
@@ -81,22 +82,22 @@ export default function Header() {
             >
               <MenuIcon />
             </button>
-            <a href="/" className="ml-4 nav-link logo">
+            <Link to="/" className="ml-4 nav-link logo">
               <Logo />
-            </a>
+            </Link>
           </div>
           <nav className="hidden xl:flex xl:gap-8 xl:items-center xl:font-normal xl:text-neutral-dark-grayish-blue xl:col-span-3">
             {linkData.map((link) => {
               return (
-                <a
+                <Link
                   key={link.name}
-                  href={link.link}
+                  to={link.link}
                   className={`mb-7 xl:mb-0 xl:mt-2 py-4 ${
                     pathname === link.link && "border-b-4 border-primary-orange"
                   } nav-link`}
                 >
                   {link.name}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -126,15 +127,15 @@ export default function Header() {
                 <nav className="flex flex-col font-bold text-lg">
                   {linkData.map((link) => {
                     return (
-                      <a
-                        href={link.link}
+                      <Link
+                        to={link.link}
                         className={`mb-7 xl:mb-0 xl:mt-2 h-full ${
                           pathname === link.link &&
                           "border-l-4 border-primary-orange"
                         } nav-link`}
                       >
                         {link.name}
-                      </a>
+                      </Link>
                     );
                   })}
                 </nav>
