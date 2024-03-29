@@ -62,7 +62,11 @@ export default function ProductShowDesktop() {
       <div className="flex justify-between items-center mt-9">
         {imageData.map((img, index) => {
           return (
-            <button key={index} onClick={() => setProductShow(index)}>
+            <button
+              key={index}
+              onClick={() => setProductShow(index)}
+              className="img-click"
+            >
               <img
                 src={img.src}
                 alt={img.name}
