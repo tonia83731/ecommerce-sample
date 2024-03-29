@@ -75,6 +75,10 @@ export default function ProductInfo() {
         <button
           className="bg-primary-orange text-white flex justify-center item-center rounded-[10px] py-5 w-full"
           onClick={() => {
+            if (inputNum <= 0) {
+              alert("Products quantity must not smaller than 1!");
+              return;
+            }
             const filterItemIndex = cartItem.findIndex(
               (item) => item.name === "Fall Limited Edition Sneakers"
             );
