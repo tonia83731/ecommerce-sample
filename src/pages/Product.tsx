@@ -31,7 +31,7 @@ const ProductPage: React.FC = () => {
               onClick={() => {
                 setIsToggle(!isToggle);
               }}
-              className="w-8 h-8 bg-primary-orange rounded-full flex justify-center items-center"
+              className="w-8 h-8 bg-primary-orange rounded-full flex justify-center items-center chatbox-click"
             >
               <FaRobot
                 style={{
