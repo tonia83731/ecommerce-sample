@@ -29,6 +29,7 @@
     outline: none;
     background-color: #e4e9f2;
     padding: 2px 12px;
+    border-radius: 0 0 10px 10px;
 }
 
 .react-chatbot-kit-chat-input-form {
