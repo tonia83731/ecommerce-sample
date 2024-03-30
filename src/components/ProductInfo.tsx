@@ -104,7 +104,7 @@ export default function ProductInfo() {
           <div className="cart-icon">
             <CartIcon />
           </div>
-          <div className="ml-4 font-bold">Add to cart</div>
+          <div className="ml-4 font-bold add-to-cart">Add to cart</div>
         </button>
       </div>
     </div>
