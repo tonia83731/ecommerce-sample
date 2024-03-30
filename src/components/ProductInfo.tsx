@@ -34,6 +34,7 @@ export default function ProductInfo() {
       <div className="md:grid md:grid-cols-[157px_1fr] md:gap-4 md:h-14 md:mt-16">
         <div className="bg-neutral-light-grey rounded-[10px] flex justify-between items-center p-6 my-6 md:h-full md:my-0">
           <button
+            className="qty-btn minus-btn"
             onClick={() => {
               if (inputNum > 0) setInputNum(inputNum - 1);
               else setInputNum(0);
@@ -68,12 +69,15 @@ export default function ProductInfo() {
             }}
             onChange={(event) => setInputNum(+event.target.value)}
           />
-          <button onClick={() => setInputNum(inputNum + 1)}>
+          <button
+            className="qty-btn plus-btn"
+            onClick={() => setInputNum(inputNum + 1)}
+          >
             <PlusIcon />
           </button>
         </div>
         <button
-          className="bg-primary-orange text-white flex justify-center item-center rounded-[10px] py-5 w-full"
+          className="bg-primary-orange text-white flex justify-center item-center rounded-[10px] py-5 w-full add-to-cart"
           onClick={() => {
             if (inputNum <= 0) {
               alert("Products quantity must not smaller than 1!");
@@ -101,7 +105,7 @@ export default function ProductInfo() {
             setInputNum(0);
           }}
         >
-          <div className="cart-icon">
+          <div className="cart-icon add-to-cart">
             <CartIcon />
           </div>
           <div className="ml-4 font-bold add-to-cart">Add to cart</div>
